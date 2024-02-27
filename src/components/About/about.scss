@@ -1,0 +1,227 @@
+@use "../../sass/abstracts" as *;
+
+#about {
+  margin-top: 320px;
+  padding-bottom: 50px;
+  .about__container {
+    .title {
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $heading;
+      }
+      p {
+        margin: 0 auto;
+        margin-top: 20px;
+        max-width: 650px;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: $text;
+      }
+    }
+    .cards {
+      margin-top: 65px;
+      @include flexbox(row, space-between, center);
+      gap: 30px;
+      .card {
+        @include flexbox(column, center, center);
+        .top {
+          width: 250px;
+          height: 250px;
+          @include flexbox(row, center, center);
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+        .content {
+          margin-top: 40px;
+          text-align: center;
+          h4 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 36px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: $heading;
+          }
+          p {
+            margin-top: 16px;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: $text;
+          }
+        }
+      }
+    }
+    .buttons {
+      margin-top: 57px;
+      @include flexbox(row, center, center);
+      gap: 28px;
+      button {
+        border: none;
+        border-radius: 14px;
+        padding: 26px 38px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        box-shadow: 0px 4px 10px 0px #14142b14;
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: $mainColor;
+        color: white;
+        border: 1px solid $mainColor;
+      }
+      .btn2 {
+        border: 1px solid #eff0f6;
+        background-color: #fff;
+        color: $heading;
+        transition: 0.4s;
+        &:hover {
+          background-color: $mainColor;
+          border-color: $mainColor;
+          color: white;
+        }
+      }
+    }
+  }
+  @include media(1090px) {
+    margin-top: 150px;
+    .about__container {
+      .cards {
+        @include grid(2, 50px);
+        .card3 {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+    }
+  }
+  @include media(900px) {
+    .about__container {
+      .cards {
+        .card {
+          .top {
+            width: 200px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+  @include media(768px) {
+    margin-top: 90px;
+    .about__container {
+      .title {
+        h1 {
+          font-size: 35px;
+          line-height: 130%;
+        }
+        p {
+          margin-top: 15px;
+          font-size: 18px;
+          line-height: 130%;
+        }
+      }
+      .cards {
+        .card {
+          .content {
+            margin-top: 30px;
+            h4 {
+              font-size: 22px;
+              line-height: 130%;
+            }
+            p {
+              font-size: 18px;
+              line-height: 130%;
+            }
+          }
+        }
+      }
+      .buttons {
+        button {
+          padding: 20px 25px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  @include media(530px) {
+    margin-top: 60px;
+    .about__container {
+      .title {
+        p {
+          font-size: 16px;
+        }
+      }
+      .cards {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr !important;
+
+        .card3 {
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+        .card {
+          .content {
+            p {
+              margin-top: 12px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .buttons {
+        gap: 15px;
+        button {
+          padding: 15px 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @include media(400px) {
+    .about__container {
+      .title {
+        h1 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      .cards {
+        .card {
+          .top {
+            width: 170px;
+            height: 170px;
+          }
+          .content {
+            margin-top: 20px;
+            h4 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+      .buttons {
+        button {
+          padding: 12px 20px;
+        }
+      }
+    }
+  }
+}

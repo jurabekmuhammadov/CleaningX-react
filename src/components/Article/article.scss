@@ -1,0 +1,217 @@
+@use "../../sass/abstracts" as *;
+#article {
+  margin-top: 150px;
+  .article__container {
+    .line {
+      height: 2px;
+      background: #dcddeb;
+      margin-bottom: 150px;
+    }
+    .title {
+      @include flexbox(row, space-between, center);
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $heading;
+      }
+      .buttons {
+        @include flexbox(row, start, center);
+        gap: 28px;
+        button {
+          padding: 26px 38px;
+          border-radius: 14px;
+          border: none;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: center;
+          background-color: #fff;
+          cursor: pointer;
+          transition: 0.4s;
+        }
+        .btn1 {
+          border-color: $mainColor;
+          background-color: $mainColor;
+          box-shadow: 0px 4px 10px 0px #14142b0a;
+          color: white;
+        }
+        .btn2 {
+          border: 1px solid #eff0f6;
+          box-shadow: 0px 4px 10px 0px #14142b0a;
+          color: $heading;
+          &:hover {
+            background-color: $mainColor;
+            border-color: $mainColor;
+            color: white;
+          }
+        }
+      }
+    }
+    .cards {
+      margin-top: 70px;
+      @include flexbox(row, space-between, center);
+      gap: 30px;
+      .card {
+        position: relative;
+        // @include flexbox(row, center, center);
+        img {
+          width: 100%;
+        }
+        .contents {
+          position: absolute;
+          top: 305px;
+          left: 30px;
+          right: 30px;
+          padding: 50px;
+          border-radius: 24px;
+          border: 1px solid #eff0f6;
+          background: #fff;
+          box-shadow: 0px 2px 6px 0px rgba(20, 20, 43, 0.176);
+          h3 {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 34px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $heading;
+          }
+          p {
+            margin-top: 17px;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $text;
+          }
+          .bottom {
+            margin-top: 5px;
+            @include flexbox(row, space-between, center);
+            span {
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 20px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $heading;
+            }
+            .rectangle {
+              width: 50px;
+              height: 50px;
+              background-color: $mainColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(1100px) {
+    .article__container {
+      .cards {
+        .card {
+          border-radius: 24px;
+          box-shadow: 0px 2px 6px 0px rgba(20, 20, 43, 0.176);
+          @include flexbox(column, start, start);
+          position: static;
+          img {
+            border-top-right-radius: 24px;
+            border-top-left-radius: 24px;
+          }
+          .contents {
+            position: static;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  @include media(1000px) {
+    .article__container {
+      .title {
+        .buttons {
+          gap: 10px;
+          button {
+            padding: 15px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  @include media(850px) {
+    .article__container {
+      .title {
+        h1 {
+          font-size: 35px;
+        }
+        .buttons {
+          button {
+            font-size: 14px;
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+  @include media(800px) {
+    margin-top: 90px;
+    .article__container {
+      .line {
+        margin-bottom: 90px;
+      }
+      .cards {
+        .card {
+          .contents {
+            padding: 25px;
+            h3 {
+              font-size: 20px;
+              line-height: 130%;
+            }
+            p {
+              font-size: 18px;
+              line-height: 130%;
+            }
+            .bottom {
+              span {
+                font-size: 16px;
+              }
+              .rectangle {
+                width: 30px;
+                height: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(650px) {
+    .article__container {
+      .title {
+        h1 {
+          font-size: 30px;
+        }
+        .buttons {
+          display: none;
+        }
+      }
+    }
+  }
+  @include media(620px) {
+    margin-top: 60px;
+    .article__container {
+      .line {
+        margin-bottom: 60px;
+      }
+      .cards {
+        flex-direction: column;
+      }
+    }
+  }
+}

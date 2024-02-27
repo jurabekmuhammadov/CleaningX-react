@@ -1,0 +1,349 @@
+@use "../../sass/abstracts/" as *;
+#contact {
+  background: #f7f9fc;
+  margin-top: 400px;
+  padding-top: 130px;
+  padding-bottom: 100px;
+  .contact__container {
+    @include flexbox(row, space-between, center);
+    gap: 60px;
+    .contents {
+      width: 45%;
+      .top {
+        border-bottom: 1px solid #dcddeb;
+        padding-bottom: 30px;
+        h2 {
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 58px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $heading;
+        }
+        p {
+          font-size: 21px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $text;
+          margin: 32px 0;
+        }
+        .call {
+          @include flexbox(row, start, center);
+          gap: 16px;
+          .tel-icon {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 18px;
+            border: 1px solid #dcddeb;
+            @include flexbox(row, center, center);
+            cursor: pointer;
+          }
+          .callUsNow {
+            @include flexbox(column, start, start);
+            gap: 5px;
+            p {
+              margin: 0;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 18px;
+              letter-spacing: 1.600000023841858px;
+              text-align: left;
+              color: $text;
+              text-transform: uppercase;
+            }
+            span {
+              font-size: 28px;
+              font-weight: 700;
+              line-height: 36px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $heading;
+            }
+          }
+        }
+      }
+      .bottom {
+        padding-top: 55px;
+        h3 {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 36px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $heading;
+        }
+        p {
+          font-size: 21px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $text;
+          margin: 10px 0 30px;
+        }
+        button {
+          padding: 26px 38px;
+          border: 1px solid #eff0f6;
+          background-color: #fff;
+          border-radius: 14px;
+          box-shadow: 0px 4px 10px 0px #14142b0a;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: $heading;
+          transition: 0.4s;
+          &:hover {
+            background-color: $mainColor;
+            border-color: $mainColor;
+            color: white;
+          }
+        }
+      }
+    }
+    form {
+      background: #ffffff;
+      border: 1px solid #eff0f6;
+      box-shadow: 0px 2px 6px 0px #14142b0a;
+      padding: 85px 60px;
+      border-radius: 14px;
+      @include grid(2, 32px);
+      div {
+        @include flexbox(column, start, start);
+        gap: 10px;
+        label {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 30px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $heading;
+        }
+        input {
+          background: #ffffff;
+          border: 1px solid #eff0f6;
+          box-shadow: 0px 2px 12px 0px #14142b14;
+          border-radius: 14px;
+          outline: none;
+          padding: 15px;
+        }
+      }
+      .textarea {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        textarea {
+          width: 100%;
+          resize: none;
+          background: #ffffff;
+          border: 1px solid #eff0f6;
+          box-shadow: 0px 2px 12px 0px #14142b14;
+          border-radius: 14px;
+          outline: none;
+          padding: 15px;
+        }
+      }
+      button {
+        border-radius: 14px;
+        padding: 25px 20px;
+        background-color: $mainColor;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+  @include media(1100px) {
+    margin-top: 140px;
+  }
+  @include media(1000px) {
+    .contact__container {
+      flex-direction: column;
+      .contents {
+        width: 100%;
+        @include flexbox(row, space-between, start);
+        gap: 40px;
+        .top {
+          padding-bottom: 0;
+          border: none;
+        }
+        .bottom {
+          padding-top: 0;
+        }
+      }
+      form {
+        padding: 50px;
+        width: 100%;
+        grid-gap: 20px;
+        div {
+          input {
+            width: 100%;
+          }
+        }
+        button {
+          width: 50%;
+        }
+      }
+    }
+  }
+  @include media(768px) {
+    margin-top: 90px;
+    padding: 90px 0;
+    .contact__container {
+      .contents {
+        .top {
+          h2 {
+            line-height: 130%;
+            font-size: 35px;
+          }
+          p {
+            font-size: 18px;
+            margin: 10px 0;
+            line-height: 130%;
+          }
+          .call {
+            .tel-icon {
+              padding: 10px;
+              img {
+                width: 30px;
+              }
+            }
+            .callUsNow {
+              span {
+                font-size: 22px;
+              }
+            }
+          }
+        }
+        .bottom {
+          h3 {
+            line-height: 130%;
+            font-size: 22px;
+          }
+          p {
+            font-size: 18px;
+            line-height: 130%;
+          }
+          button {
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+        }
+      }
+      form {
+        padding: 20px;
+        div {
+          label {
+            font-size: 16px;
+          }
+          input {
+            padding: 12px;
+          }
+          textarea {
+            padding: 12px;
+          }
+        }
+        button {
+          padding: 15px;
+          font-size: 16px;
+          width: 70%;
+        }
+      }
+    }
+  }
+  @include media(550px) {
+    margin-top: 60px;
+    padding: 60px 0;
+    .contact__container {
+      .contents {
+        flex-direction: column;
+        align-items: center;
+        .top {
+          h2 {
+            text-align: center;
+          }
+          p {
+            text-align: center;
+          }
+          .call {
+            justify-content: center;
+          }
+        }
+        .bottom {
+          text-align: center;
+          h3 {
+            text-align: center;
+          }
+          p {
+            text-align: center;
+          }
+        }
+      }
+      form {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+        div {
+          gap: 5px;
+          input {
+            padding: 10px;
+          }
+        }
+        .textarea {
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @include media(400px) {
+    .contact__container {
+      .contents {
+        .top {
+          p {
+            margin: 15px 0;
+            font-size: 16px;
+          }
+          h2 {
+            font-size: 30px;
+          }
+          .call {
+            .tel-icon {
+              padding: 10px;
+              img {
+                width: 25px;
+              }
+            }
+            .callUsNow {
+              p {
+                font-size: 14px;
+              }
+              span {
+                font-size: 18px;
+                line-height: 130%;
+              }
+            }
+          }
+        }
+        .bottom {
+          p {
+            font-size: 16px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

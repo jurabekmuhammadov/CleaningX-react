@@ -1,0 +1,213 @@
+@use "../../sass/abstracts" as *;
+
+#hero {
+  position: relative;
+  padding-top: 130px;
+  // z-index: -1;
+  .hero__container {
+    padding-top: 180px;
+    .hero__content {
+      h1 {
+        font-size: 68px;
+        font-weight: 700;
+        line-height: 74px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $heading;
+        max-width: 520px;
+      }
+      p {
+        margin-top: 22px;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: $text;
+        max-width: 590px;
+      }
+      .info {
+        margin-top: 40px;
+        @include flexbox(row, start, center);
+        gap: 28px;
+        .hero__btn {
+          background: $mainColor;
+          padding: 26px 38px;
+          border: none;
+          border-radius: 14px;
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: center;
+          color: white;
+          transition: 0.4s;
+          cursor: pointer;
+          &:hover {
+            background: #0064d6;
+          }
+        }
+        .call {
+          @include flexbox(row, start, center);
+          gap: 16px;
+          .tel-icon {
+            background-color: #fff;
+            border-radius: 50%;
+            padding: 18px;
+            border: 1px solid #dcddeb;
+            @include flexbox(row, center, center);
+            cursor: pointer;
+          }
+          .callUsNow {
+            @include flexbox(column, start, start);
+            gap: 5px;
+            p {
+              margin: 0;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 18px;
+              letter-spacing: 1.600000023841858px;
+              text-align: left;
+              color: $text;
+              text-transform: uppercase;
+            }
+            span {
+              font-size: 28px;
+              font-weight: 700;
+              line-height: 36px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: $heading;
+            }
+          }
+        }
+      }
+    }
+    .hero__pic {
+      position: absolute;
+      right: 0;
+      top: 130px;
+      z-index: -1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  @include media(960px) {
+    padding: 0;
+    position: static;
+    .hero__container {
+      padding-top: 160px;
+      padding-bottom: 50px;
+      @include flexbox(column, start, start);
+      gap: 40px;
+      .hero__content {
+        width: 100%;
+        h1 {
+          max-width: 100%;
+          text-align: center;
+          font-size: 50px;
+          line-height: 120%;
+        }
+        p {
+          text-align: center;
+          max-width: 100%;
+          font-size: 18px;
+          line-height: 130%;
+        }
+        .info {
+          justify-content: center;
+          .hero__btn {
+            padding: 20px 25px;
+          }
+          .call {
+            .tel-icon {
+              padding: 15px;
+              img {
+                width: 30px;
+              }
+            }
+            .callUsNow span {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+      .hero__pic {
+        width: 100%;
+        position: static;
+        img {
+          width: 100%;
+          height: 100%;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @include media(800px) {
+    .hero__container {
+      padding-top: 130px;
+    }
+  }
+  @include media(550px) {
+    .hero__container {
+      .hero__content {
+        h1 {
+          font-size: 35px;
+          line-height: 110%;
+        }
+        p {
+          font-size: 16px;
+        }
+        .info {
+          gap: 16px;
+          .hero__btn {
+            padding: 16px;
+            font-size: 14px;
+          }
+          .call {
+            .tel-icon {
+              padding: 12px;
+              img {
+                width: 25px;
+              }
+            }
+            .callUsNow {
+              p {
+                font-size: 14px;
+              }
+              span {
+                font-size: 18px;
+                line-height: 110%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include media(450px) {
+    .hero__container {
+      padding-top: 120px;
+      .hero__content {
+        p {
+          margin-top: 18px;
+        }
+        .info {
+          margin-top: 30px;
+          flex-direction: column-reverse;
+          .hero__btn {
+            width: 200px;
+            font-size: 14px;
+            padding: 15px;
+          }
+          .call {
+            gap: 0;
+            justify-content: space-between;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+footer {
+  padding-top: 140px;
+}
+
+footer .footer__container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.footer__container .footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__container .footer__top .card1 h3 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #211f54;
+}
+
+.footer__container .footer__top .card1 p {
+  margin: 10px 0 30px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6e7191;
+}
+
+.footer__container .footer__top .card1 .recs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__container .footer__top .card1 .recs div {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #edf5ff;
+}
+
+.footer__container .footer__top .card2 {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.footer__container .footer__top .card2 h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #211f54;
+}
+
+.footer__container .footer__top .card2 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__container .footer__top .card2 ul li p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6e7191;
+}
+
+.footer__container .footer__top .card4 h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #211f54;
+}
+
+.footer__container .footer__top .card4 span {
+  margin-top: 28px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #0075ff;
+}
+
+.footer__container .footer__top .card4 p {
+  margin: 6px 0 18px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6e7191;
+}
+
+.footer__container .footer__top .card4 button {
+  padding: 26px 38px;
+  border-radius: 14px;
+  background: #0075ff;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: white;
+}
+
+.footer__container .footer__bottom {
+  padding: 40px 0;
+  border-top: 1px solid #eff0f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__container .footer__bottom p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #6e7191;
+}
+
+.footer__container .footer__bottom p a {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #0075ff;
+}
+
+@media (max-width: 950px) {
+  .footer__container .footer__bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__container .footer__bottom p {
+    text-align: center;
+  }
+}
+@media (max-width: 850px) {
+  footer {
+    padding-top: 90px;
+  }
+  .footer__container .footer__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+@media (max-width: 600px) {
+  footer {
+    padding-top: 60px;
+  }
+  footer .footer__container {
+    gap: 60px;
+  }
+  .footer__container .footer__top {
+    grid-template-columns: 1fr;
+  }
+  .footer__container .footer__top .card1 h3 {
+    text-align: center;
+  }
+  .footer__container .footer__top .card1 p {
+    text-align: center;
+  }
+  .footer__container .footer__top .card1 .recs {
+    width: 100%;
+    justify-content: center;
+  }
+  .footer__container .footer__top .card2 h4 {
+    text-align: center;
+  }
+  .footer__container .footer__top .card2 ul li p {
+    text-align: center;
+  }
+  .footer__container .footer__top .card4 h4 {
+    text-align: center;
+  }
+  .footer__container .footer__top .card4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__container .footer__top .card4 p {
+    text-align: center;
+  }
+  .footer__container .footer__top .card4 button {
+    padding: 15px;
+    font-size: 16px;
+  }
+  .footer__container .footer__bottom p {
+    font-size: 14px;
+    line-height: 160%;
+  }
+  .footer__container .footer__bottom p a {
+    font-size: 14px;
+    line-height: 160%;
+  }
+}
